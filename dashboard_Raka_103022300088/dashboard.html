@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard ReGreen</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <img src="../assets/logo-regreen-with-text.png" alt="ReGreen Logo" class="logo">
+      <a href="#" class="active">Dashboard</a>
+      <a href="../Penjadwalan/penjadwalan.html">Pengambilan Sampah</a>
+      <a href="../validasiarea/validasiarea.html">Pendaftaran Area</a>
+      <a href="../Keuntungan/keuntungan.html">Keuntungan</a>
+      <div class="logout">
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="content">
+      <h3 class="page-title">Dashboard Admin</h3>
+
+      <!-- Jadwal Pengambilan -->
+      <section class="section-box">
+        <h3 class="section-title">Jadwal Pengambilan Terdaftar</h3>
+
+        <div class="card">
+          <div class="card-text">
+            <h5>Senin, 19 Mei 2025</h5>
+            <p>07:00–09:00</p>
+            <p><strong>Sampah:</strong> Organik, Plastik</p>
+            <p><strong>Kurir:</strong> Raditya</p>
+            <p><strong>Lokasi:</strong> Banjarnegara</p>
+          </div>
+          <div class="card-icon">👤</div>
+        </div>
+
+        <div class="card">
+          <div class="card-text">
+            <h5>Senin, 26 Mei 2025</h5>
+            <p>07:00–09:00</p>
+            <p><strong>Sampah:</strong> Organik, Plastik</p>
+            <p><strong>Kurir:</strong> Edsel</p>
+            <p><strong>Lokasi:</strong> Bojongsoang</p>
+          </div>
+          <div class="card-icon">👤</div>
+        </div>
+      </section>
+
+      <!-- Penarikan Keuntungan -->
+      <section class="section-box">
+        <h3 class="section-title">Penarikan Keuntungan Terbaru</h3>
+
+        <div class="card">
+          <div class="card-text">
+            <h5>Nama: Ahmad Solihin</h5>
+            <p><strong>Rekening:</strong> 1223455566</p>
+            <p><strong>Bank:</strong> BCA</p>
+            <p><strong>Nominal:</strong> Rp. 50.000</p>
+            <p><strong>Status:</strong> Menunggu persetujuan admin</p>
+          </div>
+          <div class="card-icon">👤</div>
+        </div>
+      </section>
+
+      <!-- Pendaftaran Area -->
+      <section class="section-box">
+        <h3 class="section-title">Pendaftaran Area Terbaru</h3>
+
+        <div class="card">
+          <div class="card-text">
+            <h5>Jl Semerta 23</h5>
+            <p><strong>RT/RW:</strong> 23/4</p>
+            <p><strong>Nama Pemohon:</strong> Gusti Agung Raka</p>
+          </div>
+          <div class="card-icon">🏠</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
