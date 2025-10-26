@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keuntungan ReGreen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <img src="../assets/logo-regreen-with-text.png" alt="ReGreen Logo" class="logo">
+      <a href="/dashboard_Raka_103022300088/dashboard.html">Dashboard</a>
+      <a href="../Penjadwalan/penjadwalan.html" class="active">Pengambilan Sampah</a>
+      <a href="../validasiarea/validasiarea.html">Pendaftaran Area</a>
+      <a href="../Keuntungan/keuntungan.html">Keuntungan</a>
+      <div class="logout">
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="content">
+      <h3>Keuntungan</h3>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Pengguna</th>
+              <th>Nominal Penarikan</th>
+              <th>Nomor Rekening</th>
+              <th>Metode</th>
+              <th>Persetujuan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Budi Santoso</td>
+              <td>Rp150.000,00</td>
+              <td>1234567890</td>
+              <td>BCA</td>
+              <td>
+                <button class="btn btn-terima">Terima</button>
+                <button class="btn btn-tolak">Tolak</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Siti Aminah</td>
+              <td>Rp200.000,00</td>
+              <td>0987654321</td>
+              <td>Mandiri</td>
+              <td>
+                <button class="btn btn-terima">Terima</button>
+                <button class="btn btn-tolak">Tolak</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Bagas Kopling</td>
+              <td>Rp100.000,00</td>
+              <td>1122334455</td>
+              <td>BNI</td>
+              <td>
+                <button class="btn btn-terima">Terima</button>
+                <button class="btn btn-tolak">Tolak</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
