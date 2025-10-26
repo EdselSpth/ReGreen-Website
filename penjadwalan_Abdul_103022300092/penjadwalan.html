@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Penjadwalan ReGreen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <img src="../assets/logo-regreen-with-text.png" alt="ReGreen Logo" class="logo">
+      <a href="../dashboard_Raka_103022300088/dashboard.html">Dashboard</a>
+      <a href="../penjadwalan_Abdul_103022300092/penjadwalan.html" class="active">Pengambilan Sampah</a>
+      <a href="../validasiarea/validasiarea.html">Pendaftaran Area</a>
+      <a href="/keuntungan_Reza_103022300109/keuntungan.html">Keuntungan</a>
+      <div class="logout">
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </nav>
+    <main class="content">
+      <h3 class="page-title">Form Penjadwalan Pengambilan Sampah</h3>
+      <section class="section-box">
+        <form id="jadwalForm" class="form-grid">
+          <div>
+            <label>Nama Kurir</label>
+            <input type="text" placeholder="Masukkan nama kurir">
+
+            <label>Jam Mulai</label>
+            <input type="time">
+
+            <label>Hari</label>
+            <input type="text" placeholder="Masukkan hari">
+
+            <label>Jenis Sampah</label>
+            <input type="text" placeholder="Masukkan jenis sampah">
+          </div>
+          <div>
+            <label>Jam Selesai</label>
+            <input type="time">
+
+            <label>Tanggal</label>
+            <input type="date">
+
+            <label>Area Penjemputan</label>
+            <input type="text" placeholder="Masukkan area penjemputan">
+          </div>
+          <div class="form-button">
+            <button type="button" id="tambahBtn">Tambah Jadwal</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
