@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loginMessage.innerHTML = `<div class="alert alert-success" role="alert">Login berhasil! Mengalihkan...</div>`;
             
             setTimeout(() => {
-                window.location.href = '../Dashboard/dashboard.html'; 
+                window.location.href = '../dashboard_Raka_103022300088/dashboard.html'; 
             }, 2000);
 
         } else {
