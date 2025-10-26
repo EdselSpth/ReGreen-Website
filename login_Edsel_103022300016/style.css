@@ -150,7 +150,7 @@ body {
     border-color: #c3e6cb;
 }
 
-/* Responsive Styles untuk ada 2 panel jika di desktop*/
+/* Edsel Inget!!! : Responsive Styles untuk ada 2 panel jika di desktop*/
 @media (min-width: 992px) {
     .left-panel {
         display: flex;
