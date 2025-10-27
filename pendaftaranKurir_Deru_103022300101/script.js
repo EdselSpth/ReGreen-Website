@@ -7,4 +7,5 @@ document.getElementById("logoutBtn").addEventListener("click", function (e) {
 
 document.getElementById("daftarBtn").addEventListener("click", function() {
   alert("Logika pendaftaran akun kurir dijalankan!");
+  document.getElementById("kurirForm").reset();
 });
