@@ -1,4 +1,4 @@
-// Logic Logout
+// Logout
 document.getElementById("logoutBtn").addEventListener("click", function (e) {
   e.preventDefault();
   if (confirm("Apakah Anda yakin ingin logout?")) {
