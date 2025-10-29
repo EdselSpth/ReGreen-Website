@@ -89,7 +89,6 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.2s ease;
-    
 }
 
 .btn-tambah:hover {
@@ -101,7 +100,7 @@ body {
     overflow-x: auto;
     margin-top: 10px;
     overflow: hidden;
-    border: 3px solid var(--hijau-tua-regreen);
+    border: 2px solid var(--hijau-tua-regreen);
     background-color: var(--hijau-muda-regreen);
     border-radius: 10px;
 }
