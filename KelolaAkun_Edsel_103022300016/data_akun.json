@@ -1,0 +1,17 @@
+[
+  {
+    "username": "admin_regreen",
+    "email": "admin@regreen.com",
+    "role": "Admin"
+  },
+  {
+    "username": "budi_santoso",
+    "email": "budi.s@gmail.com",
+    "role": "User"
+  },
+  {
+    "username": "kurir_cecep",
+    "email": "cecep@regreen.com",
+    "role": "Kurir"
+  }
+]
