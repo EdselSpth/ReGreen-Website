@@ -13,5 +13,10 @@
     "username": "kurir_cecep",
     "email": "cecep@regreen.com",
     "role": "Kurir"
+  },
+  {
+    "username": "kurir_asep",
+    "email": "asep@regreen.com",
+    "role": "Kurir"
   }
 ]
