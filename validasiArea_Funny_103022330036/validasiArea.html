@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pendaftaran Area - ReGreen</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <!-- SIDEBAR -->
     <nav class="sidebar">
-      <img src="../assets/logo-regreen-with-text.png" alt="ReGreen" class="logo" />
       <div>
+        <img src="../assets/logo-regreen-with-text.png" alt="ReGreen" class="logo">
         <a href="../dashboard_Raka_103022300088/dashboard.html">Dashboard</a>
         <a href="../penjadwalan_Abdul_103022300092/penjadwalan.html">Pengambilan Sampah</a>
-        <a href="../../validasiarea_Funny_103022330036/validasiArea.html" class="active">Pendaftaran Area</a>
+        <a href="validasiArea.html" class="active">Pendaftaran Area</a>
         <a href="../keuntungan_Reza_103022300109/keuntungan.html">Keuntungan</a>
         <a href="../pendaftaranKurir_Deru_103022300101/pendaftaranKurir.html">Pendaftaran Kurir</a>
         <a href="../KelolaAkun_Edsel_103022300016/kelola_akun.html">Kelola Akun</a>
@@ -22,20 +22,20 @@
       <div class="logout">
         <a href="#" id="logoutBtn">Logout</a>
       </div>
+      
     </nav>
-
-    <!-- CONTENT -->
     <main class="content">
       <h3 class="page-title">Pendaftaran Area</h3>
 
+      <!-- TABEL PENDING -->
       <div class="table-container section-box">
-        <table>
+        <table id="tblPending">
           <thead>
             <tr>
-              <th>No</th>
-              <th>Nama Pengguna</th>
-              <th>Detail Area Yang Ingin Ditambahkan</th>
-              <th>Persetujuan Admin</th>
+              <th style="width:6%">No</th>
+              <th style="width:20%">Nama Pengguna</th>
+              <th style="width:52%">Detail Area Yang Ingin Ditambahkan</th>
+              <th style="width:22%">Persetujuan Admin</th>
             </tr>
           </thead>
           <tbody>
@@ -66,7 +66,31 @@
                 <button class="btn btn-tolak">Tolak</button>
               </td>
             </tr>
+            <tr>
+              <td>4</td>
+              <td>Rehan Ananta</td>
+              <td>Kecamatan Cibabat, Kelurahan Cimahi Utara, Kota Cimahi 40513</td>
+              <td>
+                <button class="btn btn-terima">Terima</button>
+                <button class="btn btn-tolak">Tolak</button>
+              </td>
+            </tr>
           </tbody>
+        </table>
+      </div>
+
+      <!-- TABEL DISETUJUI/DITOLAK -->
+      <div class="table-container section-box">
+        <table id="tblAccepted">
+          <thead>
+            <tr>
+              <th style="width:6%">No</th>
+              <th style="width:20%">Nama Pengguna</th>
+              <th style="width:52%">Detail Area</th>
+              <th style="width:22%">Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
         </table>
       </div>
     </main>
