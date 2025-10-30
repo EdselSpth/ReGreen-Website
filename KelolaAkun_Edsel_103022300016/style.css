@@ -219,7 +219,7 @@ body {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: white;
     border-radius: 8px;
     width: 90%;
     max-width: 500px; 
@@ -259,7 +259,8 @@ body {
 }
 
 .modal-body {
-    padding: 24px;
+    margin-top: 12px;
+    margin: 24px;
 }
 
 .form-group {
@@ -279,10 +280,11 @@ body {
 .form-group select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--hijau-tua-regreen);
     border-radius: 4px;
     box-sizing: border-box; 
     font-size: 14px;
+    background-color: var(--hijau-muda-regreen);
 }
 
 .modal-footer {
