@@ -9,7 +9,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: white;
 }
 
@@ -18,11 +18,13 @@ body {
   min-height: 100vh;
 }
 
+/* mengatur sidebar */
 .sidebar {
 	width: 220px;
 	background-color: #dce8c6;
 	display: flex;
 	flex-direction: column;
+    justify-content: space-between;
 	padding: 20px 0;
 }
 
@@ -54,6 +56,7 @@ body {
 	border-top: 1px solid #b5c7a3;
 }
 
+/* content utama*/
 .main-content{
     flex-grow: 1;
 }
@@ -95,6 +98,7 @@ body {
     background-color: #4a6842;
 }
 
+/* table*/
 .table-container {
     width: 100%;
     overflow-x: auto;

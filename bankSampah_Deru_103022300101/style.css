@@ -9,7 +9,7 @@
 /* Layout dasar */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: white;
 }
 
@@ -68,6 +68,7 @@ body {
   font-size: 15pt;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
 .page-content {
