@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const tableBody = document.getElementById("data-bank-body");
   const tombolTambah = document.querySelector(".btn-tambah");
   const modalTambah = document.getElementById("modal-tambah");
+  const modalEdit = document.getElementById("modal-edit");
   const formTambah = document.getElementById("form-tambah");
-  const tombolTutup = document.querySelector(".btn-tutup");
-  const tombolBatal = document.querySelector(".btn-batal");
+  const formEdit = document.getElementById("form-edit");
+  const tombolTutup = document.querySelectorAll(".btn-tutup");
+  const tombolBatal = document.querySelectorAll(".btn-batal");
 
   let dataBank = [
     {
@@ -37,18 +39,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // buka / tutup modal
-  const openModal = () => modalTambah.classList.add("active");
-  const closeModal = () => modalTambah.classList.remove("active");
+  function openModal(modal) {
+    modal.classList.add("active");
+  }
 
-  tombolTambah.addEventListener("click", openModal);
-  tombolTutup.addEventListener("click", closeModal);
-  tombolBatal.addEventListener("click", closeModal);
+  function closeAllModals() {
+    modalTambah.classList.remove("active");
+    modalEdit.classList.remove("active");
+  }
+
+  tombolTambah.addEventListener("click", () => openModal(modalTambah));
+  tombolTutup.forEach(btn => btn.addEventListener("click", closeAllModals));
+  tombolBatal.forEach(btn => btn.addEventListener("click", closeAllModals));
+
   window.addEventListener("click", (e) => {
-    if (e.target === modalTambah) closeModal();
+    if (e.target === modalTambah || e.target === modalEdit) closeAllModals();
   });
 
-  // tambah data baru
   formTambah.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -59,23 +66,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dataBank.push({ nama, alamat, jenis, status });
     renderTabel();
-    closeModal();
+    closeAllModals();
     formTambah.reset();
   });
 
-  // hapus data
   tableBody.addEventListener("click", (e) => {
-    if (e.target.classList.contains("btn-hapus")) {
-      const index = e.target.dataset.index;
+    const target = e.target;
+    const index = target.dataset.index;
+
+    if (target.classList.contains("btn-hapus")) {
       if (confirm("Yakin ingin menghapus data ini?")) {
         dataBank.splice(index, 1);
         renderTabel();
       }
     }
 
-    if (e.target.classList.contains("btn-edit")) {
-      alert("Fitur edit bisa ditambahkan nanti");
+    if (target.classList.contains("btn-edit")) {
+      const bank = dataBank[index];
+      document.getElementById("edit-index").value = index;
+      document.getElementById("edit-nama").value = bank.nama;
+      document.getElementById("edit-alamat").value = bank.alamat;
+      document.getElementById("edit-jenis").value = bank.jenis;
+      document.getElementById("edit-status").value = bank.status;
+      openModal(modalEdit);
     }
+  });
+
+  formEdit.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const index = document.getElementById("edit-index").value;
+    dataBank[index] = {
+      nama: document.getElementById("edit-nama").value,
+      alamat: document.getElementById("edit-alamat").value,
+      jenis: document.getElementById("edit-jenis").value,
+      status: document.getElementById("edit-status").value,
+    };
+
+    renderTabel();
+    closeAllModals();
   });
 
   renderTabel();
