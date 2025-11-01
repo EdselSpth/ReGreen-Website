@@ -1,35 +1,121 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard ReGreen</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kategori Sampah | ReGreen Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <div class="container">
     <!-- Sidebar -->
     <nav class="sidebar">
-      <img src="../assets/logo-regreen-with-text.png" alt="ReGreen Logo" class="logo">
-      <a href="#" class="active">Beranda</a>
+      <img src="../assets/logo-regreen-with-text.png" alt="ReGreen Logo" class="logo" />
+      <a href="../dashboard_Raka_103022300088/dashboard.html">Beranda</a>
       <a href="../penjadwalan_Abdul_103022300092/penjadwalan.html">Pengambilan Sampah</a>
       <a href="../validasiArea_Funny_103022330036/validasiArea.html">Pendaftaran Area</a>
       <a href="../keuntungan_Reza_103022300109/keuntungan.html">Keuntungan</a>
-      <a href="../bankSampah_Deru_103022300101/dataBank.html">Data Bank Sampah</a>
+      <a href="#" class="active">Kategori Sampah</a>
       <a href="../kelolaAkun_Edsel_103022300016/kelola_akun.html">Kelola Akun</a>
-      <a href="../kategoriSampah_Raka_103022300088/kategoriSampah.html">Kategori Sampah</a>
       <div class="logout">
         <a href="#" id="logoutBtn">Logout</a>
       </div>
     </nav>
 
-    <!-- Content -->
-        <main class="content">
-          <header class="header">
-            <h2>KATEGORI SAMPAH</h2>
-          </header>
-    </main>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="header">DATA KATEGORI SAMPAH</div>
+
+      <div class="page-content">
+        <div class="content">
+          <button class="btn-tambah" id="btnTambah">+ Tambah Kategori</button>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama Kategori</th>
+                  <th>Deskripsi</th>
+                  <th>Harga per Kg (Rp)</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="data-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Tambah -->
+  <div class="modal" id="modal-tambah">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Tambah Kategori Sampah</h2>
+        <span class="btn-tutup">&times;</span>
+      </div>
+
+      <div class="modal-body">
+        <form id="form-tambah">
+          <div class="form-group">
+            <label>Nama Kategori</label>
+            <input type="text" id="tambah-nama" required />
+          </div>
+
+          <div class="form-group">
+            <label>Deskripsi</label>
+            <textarea id="tambah-deskripsi" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Harga per Kg (Rp)</label>
+            <input type="number" id="tambah-harga" required />
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn-aksi btn-batal">Batal</button>
+            <button type="submit" class="btn-aksi btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Edit -->
+  <div class="modal" id="modal-edit">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Kategori Sampah</h2>
+        <span class="btn-tutup">&times;</span>
+      </div>
+
+      <div class="modal-body">
+        <form id="form-edit">
+          <input type="hidden" id="edit-index" />
+
+          <div class="form-group">
+            <label>Nama Kategori</label>
+            <input type="text" id="edit-nama" required />
+          </div>
+
+          <div class="form-group">
+            <label>Deskripsi</label>
+            <textarea id="edit-deskripsi" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Harga per Kg (Rp)</label>
+            <input type="number" id="edit-harga" required />
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn-aksi btn-batal">Batal</button>
+            <button type="submit" class="btn-aksi btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
