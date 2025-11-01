@@ -129,6 +129,7 @@ body {
   color: #333;
 }
 
+/* Status badge */
 .badge {
   padding: 4px 8px;
   border-radius: 12px;
@@ -145,6 +146,7 @@ body {
   background-color: #dc3545;
 }
 
+/* Tombol Aksi */
 .btn-aksi {
   border: none;
   padding: 6px 12px;
@@ -158,7 +160,7 @@ body {
 }
 
 .btn-aksi:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .btn-edit {
@@ -174,10 +176,10 @@ body {
 }
 
 .btn-batal {
-  background-color: #888;
+  background-color: #777;
 }
 
-/* ===== MODAL (Versi Rapih & Seragam) ===== */
+/* ===== MODAL (rapih & seragam) ===== */
 .modal {
   display: none;
   position: fixed;
@@ -281,28 +283,4 @@ body {
   justify-content: flex-end;
   gap: 10px;
   background-color: #fafafa;
-}
-
-/* Tombol di Modal */
-.btn-aksi {
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-  transition: all 0.2s ease;
-  color: white;
-}
-
-.btn-batal {
-  background-color: #777;
-}
-
-.btn-simpan {
-  background-color: var(--hijau-tua-regreen);
-}
-
-.btn-aksi:hover {
-  opacity: 0.9;
 }
