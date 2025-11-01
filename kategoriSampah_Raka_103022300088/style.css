@@ -1,51 +1,40 @@
+/* =========================================================
+   🌿 ReGreen Dashboard – Kategori Sampah Stylesheet
+   ========================================================= */
+
+/* ---------- VARIABEL WARNA UTAMA ---------- */
 :root {
   --hijau-tua-regreen: #558B3E;
   --hijau-muda-regreen: #D6E6C4;
   --kuning-edit: #ffc107;
   --merah-hapus: #dc3545;
-  --biru-password: #72c3f5;
   --border-hijau: #b5c7a3;
-  --abu-bg: #f8f9fa;
-  --abu-card: #e6eadf;
 }
 
-/* ===== Global ===== */
+/* =========================================================
+   🧱 LAYOUT DASAR
+   ========================================================= */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: var(--abu-bg);
-  color: #333;
-  font-size: 0.9rem;
+  background-color: white;
 }
 
 .container {
   display: flex;
   min-height: 100vh;
-  overflow: hidden;
 }
 
-/* ===== Sidebar ===== */
+/* =========================================================
+   📚 SIDEBAR
+   ========================================================= */
 .sidebar {
-	width: 220px;
-	background-color: #dce8c6;
-	display: flex;
-	flex-direction: column;
-	padding: 20px 0;
-}
-
-.sidebar a {
-	color: black;
-	font-weight: bold;
-	text-decoration: none;
-	display: block;
-	padding: 10px 20px;
-	border-radius: 6px;
-	transition: 0.2s;
-}
-
-.sidebar a:hover,
-.sidebar a.active {
-	background-color: #cdd9bf;
+  width: 220px;
+  background-color: #dce8c6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 .logo {
@@ -55,60 +44,265 @@ body {
   margin: 20px auto;
 }
 
+.sidebar a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #cdd9bf;
+}
+
 .logout {
-	margin-top: auto;
-	padding: 20px;
-	border-top: 1px solid #b5c7a3;
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid var(--border-hijau);
 }
 
-/* ===== Content ===== */
-.content {
-  flex: 1;
-  background-color: #fff;
-  overflow-y: auto;
+/* =========================================================
+   🧭 MAIN CONTENT
+   ========================================================= */
+.main-content {
+  flex-grow: 1;
 }
 
-/* ===== Header ===== */
 .header {
   background-color: var(--hijau-tua-regreen);
   color: white;
-  padding: 20px 30px;
-  font-size: 1rem;
+  padding: 40px 24px;
+  font-size: 15pt;
   font-weight: bold;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
 }
 
-/* ===== Section Box ===== */
-.section-box {
-  background-color: var(--hijau-muda-regreen);
-  border: 1.5px solid var(--border-hijau);
-  border-radius: 10px;
-  padding: 15px 20px;
-  margin: 20px 30px;
+.page-content {
+  padding: 24px;
 }
 
-.section-title {
-  margin-bottom: 12px;
+.content {
+  background-color: white;
+  margin: 24px;
+  margin-top: 4px;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+/* =========================================================
+   ➕ TOMBOL TAMBAH
+   ========================================================= */
+.btn-tambah {
+  background-color: var(--hijau-tua-regreen);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
   font-weight: bold;
-  font-size: 1rem;
-  color: #2f4e1e;
+  transition: background-color 0.2s ease;
 }
 
-/* ===== Scrollbar ===== */
-.content::-webkit-scrollbar {
-  width: 8px;
+.btn-tambah:hover {
+  background-color: #4a6842;
 }
-.content::-webkit-scrollbar-thumb {
-  background-color: #c2d4b4;
+
+/* =========================================================
+   📊 TABEL DATA
+   ========================================================= */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 10px;
+  overflow: hidden;
+  border: 2px solid var(--hijau-tua-regreen);
+  background-color: var(--hijau-muda-regreen);
   border-radius: 10px;
 }
 
-
-/* Responsif: jadi satu kolom di layar kecil */
-@media (max-width: 992px) {
-  .dashboard-grid {
-    grid-template-columns: 1fr;
-  }
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
+.table-container th,
+.table-container td {
+  padding: 14px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-hijau);
+  background-color: var(--hijau-muda-regreen);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-container th {
+  font-weight: bold;
+  color: #333;
+}
+
+/* =========================================================
+   🟩 STATUS BADGE
+   ========================================================= */
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.badge.aktif {
+  background-color: #198754;
+}
+
+.badge.nonaktif {
+  background-color: #dc3545;
+}
+
+/* =========================================================
+   🧰 TOMBOL AKSI (Edit / Hapus)
+   ========================================================= */
+.btn-aksi {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.btn-aksi:hover {
+  opacity: 0.9;
+}
+
+.btn-edit {
+  background-color: var(--kuning-edit);
+}
+
+.btn-hapus {
+  background-color: var(--merah-hapus);
+}
+
+.btn-simpan {
+  background-color: var(--hijau-tua-regreen);
+}
+
+.btn-batal {
+  background-color: #777;
+}
+
+/* =========================================================
+   🪟 MODAL (Pop-up Form)
+   ========================================================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transform: translateY(-30px);
+  transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+/* ---------- HEADER MODAL ---------- */
+.modal-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--hijau-tua-regreen);
+  color: white;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.btn-tutup {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.btn-tutup:hover {
+  color: #ccc;
+}
+
+/* ---------- BODY MODAL ---------- */
+.modal-body {
+  padding: 24px;
+  background-color: #fff;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--hijau-tua-regreen);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--hijau-muda-regreen);
+  box-sizing: border-box;
+}
+
+/* ---------- FOOTER MODAL ---------- */
+.modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  background-color: #fafafa;
+}

@@ -1,0 +1,33 @@
+[
+    {
+        "nama_kategori": "Organik",
+        "deskripsi": "Sampah yang berasal dari bahan-bahan alami yang dapat terurai secara biologis, seperti sisa makanan, daun, dan ranting.",
+        "harga_per_kg": 12000
+        
+    },
+    {
+        "nama_kategori": "Anorganik",
+        "deskripsi": "Sampah yang berasal dari bahan-bahan sintetis atau buatan manusia yang tidak dapat terurai secara biologis, seperti plastik, logam, dan kaca.",
+        "harga_per_kg": 20000
+    },
+    {
+        "nama_kategori": "B3 (Bahan Berbahaya dan Beracun)",
+        "deskripsi": "Sampah yang mengandung bahan berbahaya dan beracun yang dapat membahayakan kesehatan manusia dan lingkungan, seperti limbah medis, baterai, dan cat.",
+        "harga_per_kg": 50000
+    },
+    {
+        "nama_kategori": "Elektronik",
+        "deskripsi": "Sampah yang berasal dari perangkat elektronik yang sudah tidak terpakai atau rusak, seperti ponsel, komputer, dan televisi.",
+        "harga_per_kg": 30000
+    },
+    {
+        "nama_kategori": "Kertas",
+        "deskripsi": "Sampah yang berasal dari bahan kertas, seperti koran, majalah, dan kardus.",
+        "harga_per_kg": 15000
+    },
+    {
+        "nama_kategori": "Logam",
+        "deskripsi": "Sampah yang berasal dari bahan logam, seperti kaleng, besi tua, dan aluminium.",
+        "harga_per_kg": 25000
+    }
+]
