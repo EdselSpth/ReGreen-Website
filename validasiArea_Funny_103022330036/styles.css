@@ -16,8 +16,11 @@ body {
   background-color: #dce8c6;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 20px 0;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
 }
 
 .logo {
@@ -28,7 +31,7 @@ body {
 }
 
 .sidebar a {
-  color: black;
+ color: black;
   font-weight: bold;
   text-decoration: none;
   display: block;
@@ -42,23 +45,23 @@ body {
   background-color: #cdd9bf;
 }
 
-.logout {
+.logout { 
   margin-top: auto;
-  padding: 20px;
+  padding: 40px;
   border-top: 1px solid #b5c7a3;
 }
 
 /* ================= CONTENT ================= */
 .content {
-  flex: 1;
-  padding: 40px;
-  overflow-y: auto;
+  margin-left: 240px;
+  padding: 30px 40px;
+  width: calc(100% - 240px);
 }
 
 .page-title {
   margin-bottom: 25px;
   font-size: 24px;
-  color: #1e4620;
+  color: #182b19;
   font-weight: bold;
 }
 
@@ -72,53 +75,14 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.section-title {
-  margin-bottom: 16px;
-  font-weight: bold;
-  font-size: 18px;
-  color: #145a32;
-}
-
-/* ================= CARD ================= */
-.card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e6eddc;
-  border-radius: 12px;
-  padding: 15px 20px;
-  margin-bottom: 12px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card-text h5 {
-  margin: 0 0 5px 0;
-  font-weight: bold;
-  color: #2e5d30;
-}
-
-.card-text p {
-  margin: 3px 0;
-  color: #555;
-}
-
-.card-icon {
-  font-size: 2rem;
-  color: #198754;
-}
-
+/* ================= TABLE ================= */
 .table-container {
   background-color: #d6e6c4;
   border: 2px solid #5f8f3e;
-  border-radius: 16px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 1px;
+  overflow: hidden;
 }
-
 
 table {
   width: 100%;
@@ -131,7 +95,7 @@ thead {
 
 th, td {
   text-align: left;
-  padding: 10px 14px;
+  padding: 12px 14px;
   border-bottom: 1px solid #b4c8a4;
 }
 
@@ -139,14 +103,16 @@ tbody tr:hover {
   background-color: #e8f2da;
 }
 
+/* ================= BUTTONS ================= */
 .btn {
   border: none;
   border-radius: 20px;
-  padding: 5px 14px;
+  padding: 6px 16px;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   transition: 0.2s;
+  margin-right: 8px;
 }
 
 .btn-terima {
@@ -165,4 +131,40 @@ tbody tr:hover {
 
 .btn-tolak:hover {
   background-color: #a04545;
+}
+
+/* ================= STATUS DISPLAY ================= */
+.status-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-text {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.status-text.accepted {
+  color: #558b3e;
+}
+
+.status-text.rejected {
+  color: #8b3e3e;
+}
+
+.edit-link {
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.edit-link:hover {
+  background-color: rgba(0,0,0,0.05);
+  color: #333;
 }
