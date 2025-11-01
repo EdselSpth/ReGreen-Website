@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bank Sampah | ReGreen Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <img src="../assets/logo-regreen-with-text.png" alt="ReGreen Logo" class="logo" />
+      <a href="../dashboard_Raka_103022300088/dashboard.html">Dashboard</a>
+      <a href="../penjadwalan_Abdul_103022300092/penjadwalan.html">Pengambilan Sampah</a>
+      <a href="../validasiArea_Funny_103022330036/validasiArea.html">Pendaftaran Area</a>
+      <a href="../keuntungan_Reza_103022300109/keuntungan.html">Keuntungan</a>
+      <a href="#" class="active">Data Bank Sampah</a>
+      <a href="../kelolaAkun_Edsel_103022300016/kelola_akun.html">Kelola Akun</a>
+      <div class="logout">
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="header">
+        DATA BANK SAMPAH
+      </div>
+
+      <div class="page-content">
+        <div class="content">
+          <button class="btn-tambah">+ Tambah Data</button>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama Bank Sampah</th>
+                  <th>Alamat</th>
+                  <th>Melayani Sampah</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="data-bank-body">
+                <tr>
+                  <td>Bank Sampah Hijau Lestari</td>
+                  <td>Jl. Melati No. 45, Bandung</td>
+                  <td>Plastik, Kertas</td>
+                  <td><span class="badge aktif">Aktif</span></td>
+                  <td>
+                    <button class="btn-aksi btn-edit">Edit</button>
+                    <button class="btn-aksi btn-hapus">Hapus</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Tambah -->
+  <div class="modal" id="modal-tambah">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Tambah Bank Sampah</h2>
+        <span class="btn-tutup">&times;</span>
+      </div>
+
+      <div class="modal-body">
+        <form id="form-tambah">
+          <div class="form-group">
+            <label>Nama Bank Sampah</label>
+            <input type="text" id="tambah-nama" required />
+          </div>
+
+          <div class="form-group">
+            <label>Alamat</label>
+            <input type="text" id="tambah-alamat" required />
+          </div>
+
+          <div class="form-group">
+            <label>Melayani Sampah</label>
+            <input type="text" id="tambah-jenis" placeholder="contoh: Plastik, Kertas" required />
+          </div>
+
+          <div class="form-group">
+            <label>Status</label>
+            <select id="tambah-status">
+              <option value="Aktif">Aktif</option>
+              <option value="Nonaktif">Nonaktif</option>
+            </select>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn-aksi btn-batal">Batal</button>
+            <button type="submit" class="btn-aksi btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
