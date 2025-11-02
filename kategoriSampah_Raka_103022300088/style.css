@@ -1,8 +1,3 @@
-/* =========================================================
-   🌿 ReGreen Dashboard – Kategori Sampah Stylesheet
-   ========================================================= */
-
-/* ---------- VARIABEL WARNA UTAMA ---------- */
 :root {
   --hijau-tua-regreen: #558B3E;
   --hijau-muda-regreen: #D6E6C4;
@@ -11,9 +6,7 @@
   --border-hijau: #b5c7a3;
 }
 
-/* =========================================================
-   🧱 LAYOUT DASAR
-   ========================================================= */
+/*Layout global*/
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -25,9 +18,7 @@ body {
   min-height: 100vh;
 }
 
-/* =========================================================
-   📚 SIDEBAR
-   ========================================================= */
+/* sidebar */
 .sidebar {
   width: 220px;
   background-color: #dce8c6;
@@ -65,9 +56,7 @@ body {
   border-top: 1px solid var(--border-hijau);
 }
 
-/* =========================================================
-   🧭 MAIN CONTENT
-   ========================================================= */
+/* konten utama */
 .main-content {
   flex-grow: 1;
 }
@@ -94,9 +83,7 @@ body {
   border-radius: 8px;
 }
 
-/* =========================================================
-   ➕ TOMBOL TAMBAH
-   ========================================================= */
+/* tambah */
 .btn-tambah {
   background-color: var(--hijau-tua-regreen);
   color: white;
@@ -112,9 +99,7 @@ body {
   background-color: #4a6842;
 }
 
-/* =========================================================
-   📊 TABEL DATA
-   ========================================================= */
+/* Tabel */
 .table-container {
   width: 100%;
   overflow-x: auto;
@@ -145,9 +130,7 @@ body {
   color: #333;
 }
 
-/* =========================================================
-   🟩 STATUS BADGE
-   ========================================================= */
+/* Status Badge */
 .badge {
   padding: 4px 8px;
   border-radius: 12px;
@@ -164,9 +147,7 @@ body {
   background-color: #dc3545;
 }
 
-/* =========================================================
-   🧰 TOMBOL AKSI (Edit / Hapus)
-   ========================================================= */
+/* Aksi */
 .btn-aksi {
   border: none;
   padding: 6px 12px;
@@ -199,9 +180,7 @@ body {
   background-color: #777;
 }
 
-/* =========================================================
-   🪟 MODAL (Pop-up Form) – Versi Bersih & Konsisten
-   ========================================================= */
+/* Modal */
 .modal {
   display: flex;              
   align-items: center;
@@ -238,7 +217,7 @@ body {
   transform: translateY(0);
 }
 
-/* ---------- HEADER MODAL ---------- */
+/* Header Modal */
 .modal-header {
   padding: 18px 24px;
   border-bottom: 1px solid #ddd;
@@ -268,7 +247,7 @@ body {
   color: #ccc;
 }
 
-/* ---------- BODY MODAL ---------- */
+/* Body Modal */
 .modal-body {
   padding: 24px;
   background-color: #fff;
@@ -296,7 +275,7 @@ body {
   box-sizing: border-box;
 }
 
-/* ---------- FOOTER MODAL ---------- */
+/* Footer Modal */
 .modal-footer {
   padding: 16px 24px;
   border-top: 1px solid #ddd;
@@ -306,7 +285,7 @@ body {
   background-color: #fafafa;
 }
 
-/* ---------- TOMBOL MODAL ---------- */
+/* Tombol Modal */
 .btn-aksi {
   border: none;
   padding: 6px 12px;
