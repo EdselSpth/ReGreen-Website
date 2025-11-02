@@ -9,7 +9,7 @@
   --abu-card: #e6eadf;
 }
 
-/* ===== Global ===== */
+/* Global */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -23,7 +23,7 @@ body {
   overflow: hidden;
 }
 
-/* ===== Sidebar ===== */
+/* Sidebar */
 .sidebar {
 	width: 220px;
   background-color: #dce8c6;
@@ -61,14 +61,14 @@ body {
 	border-top: 1px solid #b5c7a3;
 }
 
-/* ===== Content ===== */
+/* Content */
 .content {
   flex: 1;
   background-color: #fff;
   overflow-y: auto;
 }
 
-/* ===== Header ===== */
+/* Header */
 .header {
   background-color: var(--hijau-tua-regreen);
   color: white;
@@ -79,7 +79,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* ===== Section Box ===== */
+/* Section Box */
 .section-box {
   background-color: var(--hijau-muda-regreen);
   border: 1.5px solid var(--border-hijau);
@@ -95,7 +95,7 @@ body {
   color: #2f4e1e;
 }
 
-/* ===== Card ===== */
+/* Card  */
 .card {
   display: flex;
   justify-content: space-between;
@@ -125,12 +125,16 @@ body {
   font-size: 0.85rem;
 }
 
-.card-icon {
-  font-size: 1.8rem;
-  color: var(--hijau-tua-regreen);
+.card-icon img {
+  max-width: 100%;
+  height: auto;
+  width: 60px;
+  border-radius: 30px;
 }
 
-/* ===== Scrollbar ===== */
+
+
+/* Scrollbar */
 .content::-webkit-scrollbar {
   width: 8px;
 }
@@ -139,7 +143,7 @@ body {
   border-radius: 10px;
 }
 
-/* ===== Layout 2 Kolom ===== */
+/* Layout 2 Kolom */
 .dashboard-grid {
   display: grid;
   grid-template-columns: 2fr 1.2fr;
@@ -172,4 +176,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
-

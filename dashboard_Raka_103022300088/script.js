@@ -52,7 +52,9 @@ function tampilkanJadwal(jadwal) {
         <p><strong>Kurir:</strong> ${item.kurir}</p>
         <p><strong>Lokasi:</strong> ${item.lokasi}</p>
       </div>
-      <div class="card-icon">&#128100;</div>
+      <div class="card-icon">
+        <img src="../assets/orang.png" alt="orang Image" />
+      </div>
     </div>
   `).join("");
 
@@ -75,7 +77,9 @@ function tampilkanKeuntungan(keuntungan) {
         <p><strong>Nominal:</strong> ${item.nominal}</p>
         <p><strong>Status:</strong> ${item.status}</p>
       </div>
-      <div class="card-icon">&#128100;</div>
+      <div class="card-icon">
+        <img src="../assets/orang.png" alt="orang Image" />
+      </div>
     </div>
   `).join("");
 
@@ -96,7 +100,9 @@ function tampilkanArea(area) {
         <p><strong>RT/RW:</strong> ${item.rtrw}</p>
         <p><strong>Nama Pemohon:</strong> ${item.pemohon}</p>
       </div>
-      <div class="card-icon">&#127968;</div>
+      <div class="card-icon">
+        <img src="../assets/peta.jpg" alt="Peta Image" />
+      </div>
     </div>
   `).join("");
 
