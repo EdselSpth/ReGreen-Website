@@ -22,28 +22,46 @@
       </div>
     </nav>
 
-    <!-- Content -->
+    <!-- CONTENT -->
     <main class="content">
-      <h3>Keuntungan</h3>
+      <h3 class="page-title">Daftar Penarikan Keuntungan</h3>
 
+      <!-- Pending -->
       <div class="table-container">
-        <table>
+        <h4>Menunggu Persetujuan</h4>
+        <table id="tblPending">
           <thead>
             <tr>
               <th>No</th>
               <th>Nama Pengguna</th>
-              <th>Nominal Penarikan</th>
-              <th>Nomor Rekening</th>
+              <th>Nominal</th>
+              <th>No Rekening</th>
               <th>Metode</th>
               <th>Persetujuan</th>
             </tr>
           </thead>
-
-          <tbody id="tableBody">
-            <!-- Data akan dimuat otomatis dari JSON -->
-          </tbody>
+          <tbody id="tableBody"></tbody>
         </table>
       </div>
+
+      <!-- Accepted / Rejected -->
+      <div class="table-container" style="margin-top:25px;">
+        <h4>Riwayat Penarikan</h4>
+        <table id="tblHistory">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Pengguna</th>
+              <th>Nominal</th>
+              <th>No Rekening</th>
+              <th>Metode</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
     </main>
   </div>
 
