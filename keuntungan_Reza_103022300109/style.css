@@ -1,3 +1,14 @@
+:root {
+  --hijau-tua-regreen: #558B3E;
+  --hijau-muda-regreen: #D6E6C4;
+  --kuning-edit: #ffc107;
+  --merah-hapus: #dc3545;
+  --biru-password: #72c3f5;
+  --border-hijau: #b5c7a3;
+  --abu-bg: #f8f9fa;
+  --abu-card: #e6eadf;
+}
+
 /* ================= GLOBAL ================= */
 body {
   margin: 0;
@@ -51,15 +62,22 @@ body {
 /* ================= CONTENT ================= */
 .content {
   flex: 1;
-  padding: 40px;
-  overflow-x: auto;
+  background-color: #fff;
+  overflow-y: auto;
 }
 
-.page-title {
-  margin-bottom: 25px;
-  font-size: 24px;
-  color: #1e4620;
+.page-content {
+  padding: 50px 60px;
+}
+
+.header {
+  background-color: var(--hijau-tua-regreen);
+  color: white;
+  padding: 20px 30px;
+  font-size: 1rem;
   font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
 .table-container {
