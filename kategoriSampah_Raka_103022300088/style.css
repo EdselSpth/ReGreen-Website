@@ -200,10 +200,12 @@ body {
 }
 
 /* =========================================================
-   🪟 MODAL (Pop-up Form)
+   🪟 MODAL (Pop-up Form) – Versi Bersih & Konsisten
    ========================================================= */
 .modal {
-  display: none;
+  display: flex;              
+  align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -211,15 +213,12 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  align-items: center;
-  justify-content: center;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal.active {
-  display: flex;
   opacity: 1;
   visibility: visible;
 }
@@ -270,27 +269,6 @@ body {
 }
 
 /* ---------- BODY MODAL ---------- */
-
-.modal {
-    display: none; 
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 8px;
-}
-
 .modal-body {
   padding: 24px;
   background-color: #fff;
@@ -327,3 +305,18 @@ body {
   gap: 10px;
   background-color: #fafafa;
 }
+
+/* ---------- TOMBOL MODAL ---------- */
+.btn-aksi {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.btn-simpan { background-color: var(--hijau-tua-regreen); }
+.btn-batal { background-color: #777; }
