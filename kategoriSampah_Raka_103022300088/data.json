@@ -1,0 +1,26 @@
+[
+    {
+        "nama_kategori": "Organik",
+        "harga_per_kg": 12000
+    },
+    {
+        "nama_kategori": "Anorganik",
+        "harga_per_kg": 20000
+    },
+    {
+        "nama_kategori": "B3 (Bahan Berbahaya dan Beracun)",
+        "harga_per_kg": 50000
+    },
+    {
+        "nama_kategori": "Elektronik",
+        "harga_per_kg": 30000
+    },
+    {
+        "nama_kategori": "Kertas",
+        "harga_per_kg": 15000
+    },
+    {
+        "nama_kategori": "Logam",
+        "harga_per_kg": 25000
+    }
+]
