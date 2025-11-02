@@ -15,7 +15,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--abu-bg);
   color: #333;
-  font-size: 0.9rem;
 }
 
 .container {
@@ -27,10 +26,11 @@ body {
 /* ===== Sidebar ===== */
 .sidebar {
 	width: 220px;
-	background-color: #dce8c6;
-	display: flex;
-	flex-direction: column;
-	padding: 20px 0;
+  background-color: #dce8c6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 .sidebar a {
