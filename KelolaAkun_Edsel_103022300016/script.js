@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         closeModal();
         formTambah.reset();
         
-        console.log("Data baru ditambahkan (simulasi):", newUser);
+        console.log("Data baru ditambahkan:", newUser);
     });
 
     tableBody.addEventListener("click", (event) => {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (confirm(`Yakin ingin menghapus pengguna "${user.username}" (${user.email})?`)) {
                 dataAplikasi = dataAplikasi.filter(u => u.email !== id);
                 renderTabel(dataAplikasi);
-                console.log(`Data dengan ID ${id} dihapus (simulasi).`);
+                console.log(`Data dengan ID ${id} dihapus`);
             }
         }
     });
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             renderTabel(dataAplikasi);
             
-            console.log("Data diupdate (simulasi):", dataAplikasi[index]);
+            console.log("Data diupdate:", dataAplikasi[index]);
         }
         
         closeModal();
