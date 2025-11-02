@@ -1,0 +1,7 @@
+[
+  { "kurir": "Rendi", "hari": "Senin", "tanggal": "2025-01-13", "jamMulai": "08:00", "jamSelesai": "10:00", "jenis": "Organik", "area": "Cicendo" },
+  { "kurir": "Fajar", "hari": "Selasa", "tanggal": "2025-01-14", "jamMulai": "09:00", "jamSelesai": "11:00", "jenis": "Anorganik", "area": "Antapani" },
+  { "kurir": "Budi", "hari": "Rabu", "tanggal": "2025-01-15", "jamMulai": "07:30", "jamSelesai": "09:30", "jenis": "Campuran", "area": "Cibiru" },
+  { "kurir": "Santi", "hari": "Kamis", "tanggal": "2025-01-16", "jamMulai": "10:00", "jamSelesai": "12:00", "jenis": "Organik", "area": "Lengkong" },
+  { "kurir": "Rendi", "hari": "Jumat", "tanggal": "2025-01-17", "jamMulai": "13:00", "jamSelesai": "15:00", "jenis": "Elektronik", "area": "Kiaracondong" }
+]

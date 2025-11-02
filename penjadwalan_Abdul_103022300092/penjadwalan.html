@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,36 +27,60 @@
       <h3 class="page-title">Form Penjadwalan Pengambilan Sampah</h3>
       <section class="section-box">
         <form id="jadwalForm" class="form-grid">
-          <div>
+          <div class="form-blok">
             <label>Nama Kurir</label>
-            <input type="text" placeholder="Masukkan nama kurir">
-
-            <label>Jam Mulai</label>
-            <input type="time">
-
-            <label>Hari</label>
-            <input type="text" placeholder="Masukkan hari">
-
-            <label>Jenis Sampah</label>
-            <input type="text" placeholder="Masukkan jenis sampah">
+            <select id="kurir">
+              <option value="">-- Pilih Kurir --</option>
+            </select>
           </div>
-          <div>
+          <div class="form-blok">
+            <label>Jam Mulai</label>
+            <input type="time" id="jamMulai">
+          </div>
+          <div class="form-blok">
+            <label>Hari</label>
+            <input type="text" placeholder="Masukkan hari" id="hari">
+          </div>
+          <div class="form-blok">
+            <label>Jenis Sampah</label>
+            <input type="text" placeholder="Masukkan jenis sampah" id="jenis">
+          </div>
+          <div class="form-blok">
             <label>Jam Selesai</label>
-            <input type="time">
-
+            <input type="time" id="jamSelesai">
+          </div>
+          <div class="form-blok">
             <label>Tanggal</label>
-            <input type="date">
-
+            <input type="date" id="tanggal">
+          </div>
+          <div class="form-blok">
             <label>Area Penjemputan</label>
-            <input type="text" placeholder="Masukkan area penjemputan">
+            <input type="text" placeholder="Masukkan area penjemputan" id="area">
           </div>
           <div class="form-button">
             <button type="button" id="tambahBtn">Tambah Jadwal</button>
           </div>
         </form>
       </section>
+      <h3 class="table-name">Daftar Jadwal Pengambilan</h3>
+      <table id="tableJadwal" class="table-jadwal">
+        <thead>
+          <tr>
+            <th>Nama Kurir</th>
+            <th>Hari</th>
+            <th>Tanggal</th>
+            <th>Jam Mulai</th>
+            <th>Jam Selesai</th>
+            <th>Jenis Sampah</th>
+            <th>Area</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </main>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
