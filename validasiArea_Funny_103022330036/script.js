@@ -1,86 +1,93 @@
-// ===== Logout =====
-document.getElementById("logoutBtn")?.addEventListener("click", function (e) {
+// Logout
+document.getElementById("logoutBtn").addEventListener("click", (e) => {
   e.preventDefault();
   if (confirm("Apakah Anda yakin ingin logout?")) {
-    window.location.href = "../login_Edsel_103022330036/login.html";
+    window.location.href = "../login_Edsel_103022300016/login.html";
   }
 });
 
-// ===== Element =====
-const tblPending = document.querySelector("#tblPending tbody");
-const tblAccepted = document.querySelector("#tblAccepted tbody");
+const tblPendingBody = document.querySelector("#tblPending tbody");
+const tblHistoryBody = document.querySelector("#tblHistory tbody");
 
-// ===== Helper Functions =====
-function setAcceptedUI(row) {
-  const cells = row.querySelectorAll("td");
-  cells[3].innerHTML = `
-    <div class="status-wrapper">
-      <span class="status-text accepted">Diterima</span>
-      <a href="#" class="edit-link" data-action="tolak">Ubah</a>
-    </div>
+// Load JSON Pendaftaran Area
+fetch("dataPendaftaran_area.json")
+  .then((res) => {
+    if (!res.ok) throw new Error(`Gagal load JSON: ${res.status}`);
+    return res.json();
+  })
+  .then((data) => {
+    data.forEach(addRowToPending);
+    updateNumbers(tblPendingBody);
+  })
+  .catch(console.error);
+
+function addRowToPending(item) {
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+    <td></td>
+    <td>${item.nama ?? "-"}</td>
+    <td>${item.detail_area_yang_ingin_ditambahkan ?? "-"}</td>
+    <td>
+      <button class="btn btn-terima">Terima</button>
+      <button class="btn btn-tolak">Tolak</button>
+    </td>
   `;
+  tblPendingBody.appendChild(tr);
 }
 
-function setRejectedUI(row) {
-  const cells = row.querySelectorAll("td");
-  cells[3].innerHTML = `
-    <div class="status-wrapper">
-      <span class="status-text rejected">Ditolak</span>
-      <a href="#" class="edit-link" data-action="terima">Ubah</a>
-    </div>
+function addRowToHistory(fromRow, status) {
+  const [ , namaCell, detailCell ] = fromRow.querySelectorAll("td");
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+    <td></td>
+    <td>${namaCell.textContent}</td>
+    <td>${detailCell.textContent}</td>
+    <td>
+      <span class="status-text ${status === "Diterima" ? "accepted" : "rejected"}">${status}</span>
+      <a class="edit-link" data-status="${status}">Ubah</a>
+    </td>
   `;
+  tblHistoryBody.appendChild(tr);
+  updateNumbers(tblHistoryBody);
 }
 
-function setPendingUI(row) {
-  const cells = row.querySelectorAll("td");
-  cells[3].innerHTML = `
-    <button class="btn btn-terima">Terima</button>
-    <button class="btn btn-tolak">Tolak</button>
-  `;
+function updateNumbers(tbody) {
+  [...tbody.rows].forEach((row, i) => (row.cells[0].textContent = i + 1));
 }
 
-function updateRowNumbers(tbody) {
-  const rows = tbody.querySelectorAll("tr");
-  rows.forEach((row, index) => {
-    row.querySelector("td:first-child").textContent = index + 1;
-  });
-}
+// Event delegation
+document.addEventListener("click", (e) => {
+  const acceptBtn = e.target.closest(".btn-terima");
+  const rejectBtn = e.target.closest(".btn-tolak");
+  const editBtn = e.target.closest(".edit-link");
 
-// ===== Event Listener =====
-document.addEventListener("click", function (e) {
-  // TERIMA
-  const terima = e.target.closest(".btn-terima");
-  if (terima) {
-    const row = terima.closest("tr");
-    setAcceptedUI(row);
-    tblAccepted.appendChild(row);
-    updateRowNumbers(tblPending);
-    updateRowNumbers(tblAccepted);
-    return;
+  if (acceptBtn) {
+    const row = acceptBtn.closest("tr");
+    row.remove();
+    addRowToHistory(row, "Diterima");
+    updateNumbers(tblPendingBody);
   }
 
-  // TOLAK
-  const tolak = e.target.closest(".btn-tolak");
-  if (tolak) {
-    const row = tolak.closest("tr");
-    setRejectedUI(row);
-    tblAccepted.appendChild(row);
-    updateRowNumbers(tblPending);
-    updateRowNumbers(tblAccepted);
-    return;
+  if (rejectBtn) {
+    const row = rejectBtn.closest("tr");
+    row.remove();
+    addRowToHistory(row, "Ditolak");
+    updateNumbers(tblPendingBody);
   }
 
-  // EDIT LINK
-  const editLink = e.target.closest(".edit-link");
-  if (editLink) {
-    e.preventDefault();
-    const row = editLink.closest("tr");
-    const action = editLink.dataset.action;
-    
-    if (action === "tolak") {
-      setRejectedUI(row);
-    } else if (action === "terima") {
-      setAcceptedUI(row);
+  if (editBtn) {
+    const row = editBtn.closest("tr");
+    const statusSpan = row.querySelector(".status-text");
+    const now = statusSpan.textContent.trim();
+
+    if (now === "Diterima") {
+      statusSpan.textContent = "Ditolak";
+      statusSpan.classList.remove("accepted");
+      statusSpan.classList.add("rejected");
+    } else {
+      statusSpan.textContent = "Diterima";
+      statusSpan.classList.remove("rejected");
+      statusSpan.classList.add("accepted");
     }
   }
 });

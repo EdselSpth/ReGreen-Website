@@ -1,3 +1,14 @@
+:root {
+  --hijau-tua-regreen: #558B3E;
+  --hijau-muda-regreen: #D6E6C4;
+  --kuning-edit: #ffc107;
+  --merah-hapus: #dc3545;
+  --biru-password: #72c3f5;
+  --border-hijau: #b5c7a3;
+  --abu-bg: #f8f9fa;
+  --abu-card: #e6eadf;
+}
+
 /* ================= GLOBAL ================= */
 body {
   margin: 0;
@@ -16,11 +27,8 @@ body {
   background-color: #dce8c6;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 20px 0;
-  position: fixed;
-  height: 100vh;
-  left: 0;
-  top: 0;
 }
 
 .logo {
@@ -31,7 +39,7 @@ body {
 }
 
 .sidebar a {
- color: black;
+  color: black;
   font-weight: bold;
   text-decoration: none;
   display: block;
@@ -45,43 +53,39 @@ body {
   background-color: #cdd9bf;
 }
 
-.logout { 
+.logout {
   margin-top: auto;
-  padding: 40px;
+  padding: 20px;
   border-top: 1px solid #b5c7a3;
 }
 
 /* ================= CONTENT ================= */
 .content {
-  margin-left: 240px;
-  padding: 30px 40px;
-  width: calc(100% - 240px);
+  flex: 1;
+  background-color: #fff;
+  overflow-y: auto;
 }
 
-.page-title {
-  margin-bottom: 25px;
-  font-size: 24px;
-  color: #182b19;
+.page-content {
+  padding: 50px 60px;
+}
+
+.header {
+  background-color: var(--hijau-tua-regreen);
+  color: white;
+  padding: 20px 30px;
+  font-size: 1rem;
   font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* ================= SECTION BOX ================= */
-.section-box {
-  background-color: #d6e6c4;
-  border: 2px solid #198754;
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* ================= TABLE ================= */
 .table-container {
   background-color: #d6e6c4;
   border: 2px solid #5f8f3e;
-  border-radius: 10px;
-  padding: 1px;
-  overflow: hidden;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
 }
 
 table {
@@ -95,7 +99,7 @@ thead {
 
 th, td {
   text-align: left;
-  padding: 12px 14px;
+  padding: 10px 14px;
   border-bottom: 1px solid #b4c8a4;
 }
 
@@ -103,16 +107,14 @@ tbody tr:hover {
   background-color: #e8f2da;
 }
 
-/* ================= BUTTONS ================= */
 .btn {
   border: none;
-  border-radius: 20px;
-  padding: 6px 16px;
+  border-radius: 5px;
+  padding: 5px 14px;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   transition: 0.2s;
-  margin-right: 8px;
 }
 
 .btn-terima {
@@ -133,7 +135,6 @@ tbody tr:hover {
   background-color: #a04545;
 }
 
-/* ================= STATUS DISPLAY ================= */
 .status-wrapper {
   display: flex;
   align-items: center;
@@ -168,3 +169,8 @@ tbody tr:hover {
   background-color: rgba(0,0,0,0.05);
   color: #333;
 }
+
+#tblPending th:first-child,
+#tblHistory th:first-child,
+#tblPending td:first-child,
+#tblHistory td:first-child { width: 60px; }
