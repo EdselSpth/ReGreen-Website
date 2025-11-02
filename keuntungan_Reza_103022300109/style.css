@@ -52,7 +52,7 @@ body {
 .content {
   flex: 1;
   padding: 40px;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .page-title {
@@ -62,63 +62,12 @@ body {
   font-weight: bold;
 }
 
-/* ================= SECTION BOX ================= */
-.section-box {
-  background-color: #d6e6c4;
-  border: 2px solid #198754;
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.section-title {
-  margin-bottom: 16px;
-  font-weight: bold;
-  font-size: 18px;
-  color: #145a32;
-}
-
-/* ================= CARD ================= */
-.card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e6eddc;
-  border-radius: 12px;
-  padding: 15px 20px;
-  margin-bottom: 12px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card-text h5 {
-  margin: 0 0 5px 0;
-  font-weight: bold;
-  color: #2e5d30;
-}
-
-.card-text p {
-  margin: 3px 0;
-  color: #555;
-}
-
-.card-icon {
-  font-size: 2rem;
-  color: #198754;
-}
-
 .table-container {
   background-color: #d6e6c4;
   border: 2px solid #5f8f3e;
   border-radius: 16px;
   padding: 20px;
 }
-
 
 table {
   width: 100%;
@@ -141,7 +90,7 @@ tbody tr:hover {
 
 .btn {
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px 14px;
   font-weight: 600;
   font-size: 14px;
@@ -166,3 +115,4 @@ tbody tr:hover {
 .btn-tolak:hover {
   background-color: #a04545;
 }
+

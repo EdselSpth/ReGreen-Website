@@ -12,13 +12,11 @@
     <!-- Sidebar -->
     <nav class="sidebar">
       <img src="../assets/logo-regreen-with-text.png" alt="ReGreen Logo" class="logo">
-      <a href="../dashboard_Raka_103022300088/dashboard.html">Beranda</a>
+      <a href="../dashboard_Raka_103022300088/dashboard.html">Dashboard</a>
       <a href="../penjadwalan_Abdul_103022300092/penjadwalan.html">Pengambilan Sampah</a>
       <a href="../validasiArea_Funny_103022330036/validasiArea.html">Pendaftaran Area</a>
       <a href="../keuntungan_Reza_103022300109/keuntungan.html" class="active">Keuntungan</a>
-      <a href="../bankSampah_Deru_103022300101/dataBank.html">Data Bank Sampah</a>
-      <a href="../KelolaAkun_Edsel_103022300016/kelola_akun.html">Kelola Akun</a>
-      <a href="../kategoriSampah_Raka_103022300088/kategoriSampah.html">Kategori Sampah</a>
+      <a href="../pendaftaranKurir_Deru_103022300101/pendaftaranKurir.html">Pendaftaran Kurir</a>
       <div class="logout">
         <a href="#" id="logoutBtn">Logout</a>
       </div>
@@ -40,40 +38,9 @@
               <th>Persetujuan</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Budi Santoso</td>
-              <td>Rp150.000,00</td>
-              <td>1234567890</td>
-              <td>BCA</td>
-              <td>
-                <button class="btn btn-terima">Terima</button>
-                <button class="btn btn-tolak">Tolak</button>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Siti Aminah</td>
-              <td>Rp200.000,00</td>
-              <td>0987654321</td>
-              <td>Mandiri</td>
-              <td>
-                <button class="btn btn-terima">Terima</button>
-                <button class="btn btn-tolak">Tolak</button>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Bagas Kopling</td>
-              <td>Rp100.000,00</td>
-              <td>1122334455</td>
-              <td>BNI</td>
-              <td>
-                <button class="btn btn-terima">Terima</button>
-                <button class="btn btn-tolak">Tolak</button>
-              </td>
-            </tr>
+
+          <tbody id="tableBody">
+            <!-- Data akan dimuat otomatis dari JSON -->
           </tbody>
         </table>
       </div>
