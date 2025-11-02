@@ -116,3 +116,38 @@ tbody tr:hover {
   background-color: #a04545;
 }
 
+.status-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-text {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.status-text.accepted {
+  color: #558b3e;
+}
+
+.status-text.rejected {
+  color: #8b3e3e;
+}
+
+.edit-link {
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.edit-link:hover {
+  background-color: rgba(0,0,0,0.05);
+  color: #333;
+}
+
