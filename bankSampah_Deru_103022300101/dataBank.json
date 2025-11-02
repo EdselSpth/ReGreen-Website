@@ -1,0 +1,14 @@
+[
+  {
+    "nama": "Bank Sampah Hijau Lestari",
+    "alamat": "Jl. Melati No. 45, Bandung",
+    "jenis": "Plastik, Kertas",
+    "status": "Aktif"
+  },
+  {
+    "nama": "Bank Sampah Citra Bersih",
+    "alamat": "Jl. Anggrek No. 10, Cimahi",
+    "jenis": "Logam, Botol",
+    "status": "Nonaktif"
+  }
+]

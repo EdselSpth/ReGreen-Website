@@ -8,15 +8,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const tombolTutup = document.querySelectorAll(".btn-tutup");
   const tombolBatal = document.querySelectorAll(".btn-batal");
 
-  let dataBank = [
-    {
-      nama: "Bank Sampah Hijau Lestari",
-      alamat: "Jl. Melati No. 45, Bandung",
-      jenis: "Plastik, Kertas",
-      status: "Aktif",
-    },
-  ];
+  let dataBank = [];
 
+  //LOAD DATA DARI JSON
+  async function loadData() {
+    try {
+      const res = await fetch("dataBank.json");
+      if (!res.ok) throw new Error("Gagal memuat file JSON");
+      dataBank = await res.json();
+      renderTabel();
+    } catch (err) {
+      console.error(err);
+      tableBody.innerHTML = `<tr><td colspan="5" style="text-align:center; color:red;">Gagal memuat data JSON</td></tr>`;
+    }
+  }
+
+  //RENDER TABEL
   function renderTabel() {
     tableBody.innerHTML = "";
     if (dataBank.length === 0) {
@@ -39,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  //MODAL CONTROL
   function openModal(modal) {
     modal.classList.add("active");
   }
@@ -51,11 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
   tombolTambah.addEventListener("click", () => openModal(modalTambah));
   tombolTutup.forEach(btn => btn.addEventListener("click", closeAllModals));
   tombolBatal.forEach(btn => btn.addEventListener("click", closeAllModals));
-
   window.addEventListener("click", (e) => {
     if (e.target === modalTambah || e.target === modalEdit) closeAllModals();
   });
 
+  //TAMBAH DATA
   formTambah.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -64,16 +72,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const jenis = document.getElementById("tambah-jenis").value;
     const status = document.getElementById("tambah-status").value;
 
-    dataBank.push({ nama, alamat, jenis, status });
+    const newData = { nama, alamat, jenis, status };
+    dataBank.push(newData);
+
     renderTabel();
     closeAllModals();
     formTambah.reset();
+
+    console.log("Data baru ditambahkan:", newData);
   });
 
+  //EDIT & HAPUS
   tableBody.addEventListener("click", (e) => {
     const target = e.target;
     const index = target.dataset.index;
 
+    // Hapus Data
     if (target.classList.contains("btn-hapus")) {
       if (confirm("Yakin ingin menghapus data ini?")) {
         dataBank.splice(index, 1);
@@ -81,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
+    // Edit Data
     if (target.classList.contains("btn-edit")) {
       const bank = dataBank[index];
       document.getElementById("edit-index").value = index;
@@ -92,9 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //SIMPAN HASIL EDIT
   formEdit.addEventListener("submit", (e) => {
     e.preventDefault();
-
     const index = document.getElementById("edit-index").value;
     dataBank[index] = {
       nama: document.getElementById("edit-nama").value,
@@ -102,16 +117,10 @@ document.addEventListener("DOMContentLoaded", () => {
       jenis: document.getElementById("edit-jenis").value,
       status: document.getElementById("edit-status").value,
     };
-
     renderTabel();
     closeAllModals();
   });
 
-  renderTabel();
-});
-document.getElementById("logoutBtn").addEventListener("click", function (e) {
-  e.preventDefault();
-  if (confirm("Apakah Anda yakin ingin logout?")) {
-    window.location.href = "../login_Edsel_103022300016/login.html";
-  }
+  //INISIALISASI
+  loadData();
 });
