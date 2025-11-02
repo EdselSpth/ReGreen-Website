@@ -66,6 +66,7 @@ tambahBtn.addEventListener("click", function () {
     <td>${jamSelesai}</td>
     <td>${jenis}</td>
     <td>${area}</td>
+    <td><button class="delete-btn">Hapus</button></td>
   `;
 
   tbody.appendChild(row);
