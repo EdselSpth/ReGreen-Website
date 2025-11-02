@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pendaftaran Area - ReGreen</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="container">
     <!-- SIDEBAR -->
     <nav class="sidebar">
       <div>
-        <img src="../assets/logo-regreen-with-text.png" alt="ReGreen" class="logo">
+        <img src="../assets/logo-regreen-with-text.png" alt="ReGreen" class="logo" />
         <a href="../dashboard_Raka_103022300088/dashboard.html">Beranda</a>
         <a href="../penjadwalan_Abdul_103022300092/penjadwalan.html">Pengambilan Sampah</a>
         <a href="validasiArea.html" class="active">Pendaftaran Area</a>
@@ -23,76 +24,46 @@
       <div class="logout">
         <a href="#" id="logoutBtn">Logout</a>
       </div>
-      
-    </nav>
+    </nav> <!-- ← penting: tutup nav di sini -->
+
+    <!-- CONTENT -->
     <main class="content">
-      <h3 class="page-title">Pendaftaran Area</h3>
+      <header class="header">
+        <h2>PENDAFTARAN AREA</h2>
+      </header>
 
-      <!-- TABEL PENDING -->
-      <div class="table-container section-box">
-        <table id="tblPending">
-          <thead>
-            <tr>
-              <th style="width:6%">No</th>
-              <th style="width:20%">Nama Pengguna</th>
-              <th style="width:52%">Detail Area Yang Ingin Ditambahkan</th>
-              <th style="width:22%">Persetujuan Admin</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Budi Santoso</td>
-              <td>Kecamatan Cibabat, Kelurahan Cimahi Utara, Kota Cimahi 40513</td>
-              <td>
-                <button class="btn btn-terima">Terima</button>
-                <button class="btn btn-tolak">Tolak</button>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Siti Aminah</td>
-              <td>Kecamatan Cibabat, Kelurahan Cimahi Utara, Kota Cimahi 40513</td>
-              <td>
-                <button class="btn btn-terima">Terima</button>
-                <button class="btn btn-tolak">Tolak</button>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Bagas Kopling</td>
-              <td>Kecamatan Cibabat, Kelurahan Cimahi Utara, Kota Cimahi 40513</td>
-              <td>
-                <button class="btn btn-terima">Terima</button>
-                <button class="btn btn-tolak">Tolak</button>
-              </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Rehan Ananta</td>
-              <td>Kecamatan Cibabat, Kelurahan Cimahi Utara, Kota Cimahi 40513</td>
-              <td>
-                <button class="btn btn-terima">Terima</button>
-                <button class="btn btn-tolak">Tolak</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="page-content">
+        <!-- Pending -->
+        <div class="table-container">
+          <h4>Menunggu Persetujuan</h4>
+          <table id="tblPending">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Pengguna</th>
+                <th>Detail Area Yang Ingin Ditambahkan</th>
+                <th>Persetujuan</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
 
-      <!-- TABEL DISETUJUI/DITOLAK -->
-      <div class="table-container section-box">
-        <table id="tblAccepted">
-          <thead>
-            <tr>
-              <th style="width:6%">No</th>
-              <th style="width:20%">Nama Pengguna</th>
-              <th style="width:52%">Detail Area</th>
-              <th style="width:22%">Status</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+        <!-- Riwayat -->
+        <div class="table-container" style="margin-top:25px;">
+          <h4>Riwayat Pendaftaran</h4>
+          <table id="tblHistory">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Pengguna</th>
+                <th>Detail Area Yang Ingin Ditambahkan</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
     </main>
   </div>
