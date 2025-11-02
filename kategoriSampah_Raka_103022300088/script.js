@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // === VARIABEL GLOBAL UNTUK MENYIMPAN DATA ===
+  // global
   let dataKategori = [];
 
-  // === SELEKTOR DOM ===
+  // DOM
   const dataBody = document.getElementById("data-body");
 
   // Modal Tambah
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnTutup = document.querySelectorAll(".btn-tutup");
   const btnBatal = document.querySelectorAll(".btn-batal");
 
-  // === FUNGSI RENDER TABEL ===
+  // view
   function renderTable() {
     dataBody.innerHTML = "";
     const colspan = 3;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addEditDeleteListeners();
   }
 
-  // === FUNGSI CREATE ===
+  // create
   formTambah.addEventListener("submit", (e) => {
     e.preventDefault();
     const newData = {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formTambah.reset();
   });
 
-  // === FUNGSI UPDATE ===
+  // update
   function openEditModal(index) {
     const item = dataKategori[index];
     editIndex.value = index;
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modalEdit.classList.remove("active");
   });
 
-  // === FUNGSI DELETE ===
+  // delete
   function deleteData(index) {
     const nama = dataKategori[index].nama_kategori;
     if (confirm(`Apakah Anda yakin ingin menghapus kategori "${nama}"?`)) {
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // === KONTROL MODAL ===
+  // modal
   btnTambah.addEventListener("click", () => {
     modalTambah.classList.add("active");
   });
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === modalEdit) modalEdit.classList.remove("active");
   });
 
-  // === INISIALISASI APLIKASI ===
+  // inisialisasi aplikasi
   function initApp() {
     fetch("data.json")
       .then((response) => response.ok ? response.json() : Promise.reject(`HTTP error! status: ${response.status}`))
